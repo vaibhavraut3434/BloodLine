@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+{%load static%}
+
+<html lang="en">
+  <head>
+    <title>Andrea - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>         
+    <script src="{%static 'js/abc.js'%}"></script> 
+    
+    <script src="{%static 'js/jquery-3.4.1.min.js'%}"></script> 
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{%static 'css/open-iconic-bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{%static 'css/animate.css'%}">
+    
+    <link rel="stylesheet" href="{%static 'css/owl.carousel.min.css'%}">
+    <link rel="stylesheet" href="{%static 'css/owl.theme.default.min.css'%}">
+    <link rel="stylesheet" href="{%static 'css/magnific-popup.css'%}">
+
+    <link rel="stylesheet" href="{%static 'css/aos.css'%}">
+
+    <link rel="stylesheet" href="{%static 'css/ionicons.min.css'%}">
+
+    <link rel="stylesheet" href="{%static 'css/bootstrap-datepicker.css'%}">
+    <link rel="stylesheet" href="{%static 'css/jquery.timepicker.css'%}">
+
+    
+    <link rel="stylesheet" href="{%static 'css/flaticon.css'%}">
+    <link rel="stylesheet" href="{%static 'css/icomoon.css'%}">
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+  </head>
+  <body>
+
+	<div id="colorlib-page" class="">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+		<aside id="colorlib-aside" role="complementary" class="js-fullheight">
+			<nav id="colorlib-main-menu" role="navigation">
+				<ul>
+          <li class="colorlib-active"><a href="/">Home</a></li>
+          <li><a href="/accounts/fashion">Register/Login</a></li>
+					<li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/">Logout</a></li>
+				</ul>
+			</nav>
+
+      <div class="colorlib-footer">
+          <h1 id="colorlib-logo" class="mb-5"><a href="/" style="background-image: url({% static 'images/bg_1.jpg'%});">Blood <span>Line</span></a></h1>
+          <p class="pfooter"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+      Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Vaibhav</a>
+      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+        </div>
+		</aside> <!-- END COLORLIB-ASIDE -->
+    
+    
+    <div id="colorlib-main"  class="bg-primary">
+         
+<!-- Donate  Blood start-->
+      
+<div class="row" id="donateblood">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="card">
+      <form action="/host/entry"  enctype="multipart/form-data" class="form-group" method="POST">
+        {% csrf_token %}
+
+       
+        <div class="card-body">
+          <h5 class="card-title text-center">  Enter Blood Camp Details</h5>
+          <div class="row col-4" style="padding-top: 20px">
+              <a href="#" data-toggle="modal" data-target="#Search"> Read More</a>
+          </div>
+          <div class="row">  
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+              <input type="text" required="True" class="form-control" name="frm2name" placeholder="Your Full Name">
+          </div>
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+              <input class="justify-content-center form-control" required="True" name="dob" type="date" placeholder="Date of Blood Camp">
+          </div>
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+              <input type="text" required="True" class="form-control" name="bloodtype1" placeholder="Camp Location">
+          </div>
+        </div>
+        <div class="row">
+          
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <input class="form-control" required="True" name="contact" type="tel" placeholder="Mobile No.">
+        </div>
+
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <input class="form-control" required="True" name="email" type="email" placeholder="Email">
+        </div>
+
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <input class="form-control" disabled="disabled" name="country" type="text" placeholder="India">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <select id="selctstate" class="custom-select" name="frm2state">
+                <option class="active" value="select">-- Select State --</option>
+                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chandigarh">Chandigarh</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                <option value="Daman and Diu">Daman and Diu</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Lakshadweep">Lakshadweep</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Orissa">Orissa</option>
+                <option value="Pondicherry">Pondicherry</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttaranchal">Uttaranchal</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="West Bengal">West Bengal</option>
+              </select>
+          
+            
+        </div>
+
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <select id="my-select" class="custom-select" name="frm2city">
+                <option value="City" class="active" >-- Select City --</option>
+                <option value="Nagpur">Nagpur</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Pune">Pune</option>
+                <option value="Nashik">Nashik</option>
+                <option value="Latur">Latur</option>
+                <option value="Nanded">Nanded</option>
+                <option value="Akola">Akola</option>
+            </select>  
+        </div>
+
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <input type="text" required="True" class="form-control" name="frm2campname" placeholder="Blood Camp Name">
+        </div>
+        
+        </div>
+
+        <div class="row">
+          <!--
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="form-group">
+              <label for="my-input">Camp Image</label>
+              <input id="hostimg" required="True"  type="file" name="hostimg">
+            </div>
+          </div>
+          -->
+        </div>
+   
+
+        </div>
+        <div class="card-footer">
+          <div class="row justify-content-center">
+            
+              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                  <button type="submit" name="" id="" class="btn btn-success btn-block">Save</button>    
+              </div>
+              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                  <button type="reset" class="btn col-12 btn-secondary">Reset</button>      
+              </div>
+              
+          </div>
+        </div>
+    </form>
+  </div>
+
+    
+  </div>
+  
+</div>
+<!-- Donate  Blood end-->
+
+    </div>                    
+	
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg>
+
+</div>
+
+<!--
+<script> 		
+			
+  $(document).ready(function(){ 
+
+    $("#hostacamp").hide();
+    $("#donateblood").hide();
+   
+    $("#search_blood").click(function () {
+      $("#searchforblood").show();
+      $("#hostacamp").hide();
+      $("#donateblood").hide();
+    });
+
+    $("#donate_camp").click(function () {
+      $("#donateblood").show();
+      $("#searchforblood").hide();
+      $("#hostacamp").hide();
+    });
+
+    $("#host_camp").click(function () {
+      $("#hostacamp").show();
+      $("#searchforblood").hide();
+      $("#donateblood").hide();
+    });
+    
+  }); 
+  
+  
+</script>
+-->
+ 
+  <script src="{%static 'js/jquery.min.js'%}"></script>
+  <script src="{%static 'js/jquery-migrate-3.0.1.min.js'%}"></script>
+  <script src="{%static 'js/popper.min.js'%}"></script>
+  <script src="{%static 'js/bootstrap.min.js'%}"></script>
+  <script src="{%static 'js/jquery.easing.1.3.js'%}"></script>
+  <script src="{%static 'js/jquery.waypoints.min.js'%}"></script>
+  <script src="{%static 'js/jquery.stellar.min.js'%}"></script>
+  <script src="{%static 'js/owl.carousel.min.js'%}"></script>
+  <script src="{%static 'js/jquery.magnific-popup.min.js'%}"></script>
+  <script src="{%static 'js/aos.js'%}"></script>
+  <script src="{%static 'js/jquery.animateNumber.min.js'%}"></script>
+  <script src="{%static 'js/scrollax.min.js'%}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false'%}"></script>
+  <script src="{%static 'js/google-map.js'%}"></script>
+  <script src="{%static 'js/main.js'%}"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+{%load static%}
+{% static "images"  as baseImg %}
+<html lang="en">
+  <head>
+    <title>Andrea - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<script src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+	
+	<script type="text/javascript" src="{% static 'fusioncharts/fusioncharts.js' %}"></script>
+	<script type="text/javascript" src="{% static 'fusioncharts/themes/fusioncharts.theme.fint.js' %}"></script>
+ 
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{%static 'css/open-iconic-bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{%static 'css/animate.css'%}">
+    
+    <link rel="stylesheet" href="{%static 'css/owl.carousel.min.css'%}">
+    <link rel="stylesheet" href="{%static 'css/owl.theme.default.min.css'%}">
+    <link rel="stylesheet" href="{%static 'css/magnific-popup.css'%}">
+
+    <link rel="stylesheet" href="{%static 'css/aos.css'%}">
+
+    <link rel="stylesheet" href="{%static 'css/ionicons.min.css'%}">
+
+    <link rel="stylesheet" href="{%static 'css/bootstrap-datepicker.css'%}">
+    <link rel="stylesheet" href="{%static 'css/jquery.timepicker.css'%}">
+
+    
+    <link rel="stylesheet" href="{%static 'css/flaticon.css'%}">
+    <link rel="stylesheet" href="{%static 'css/icomoon.css'%}">
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+  </head>
+  <body>
+		<div class="container">
+				<div class="row d-flex">
+				  <div class="col-xl-12 py-5 px-md-5">
+
+	<div class="row">
+	
+	<div id="colorlib-page" class="col-8">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+		<aside id="colorlib-aside" role="complementary" class="js-fullheight">
+			<nav id="colorlib-main-menu" role="navigation">
+				<ul>
+					<li class="colorlib-active"><a href="/">Home</a></li>
+					<li><a href="/accounts/fashion">Register/Login</a></li>
+					<li><a href="/host/bloodcamp">Host a Blood Donation Camp</a></li>
+					<li><a href="/about">About</a></li>
+					<li><a href="/contact">Contact</a></li>
+				</ul>
+			</nav>
+
+			<div class="colorlib-footer">
+					<h1 id="colorlib-logo" class="mb-5"><a href="/" style="background-image: url({% static 'images/bg_1.jpg'%});">Blood <span>Line</span></a></h1>
+					<p class="pfooter"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+		  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Vaibhav</a>
+		  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+				</div>
+		</aside> <!-- END COLORLIB-ASIDE -->
+		<div id="colorlib-main" class="bg-wa">
+			<section class="ftco-section ftco-no-pt ftco-no-pb">
+	    	<div class="container bg-pri" >
+	    		<div class="row  d-flex bg-suc">
+
+					<div></div>
+	    			<div class="col-xl-12 py-5 px-md-5 bg-secon">						
+						{% if obj  %}
+						{% for x in obj %}
+						<div class="row  pt-md-12 bg-i">
+			    			<div class="col-md-12 bg-dan">
+									<div class="blog-entry ftco-animate d-md-flex bg-w">
+										<!--	{{x.image}}  -->
+										
+										<div class="col-12 text text-2 pl-md-4 bg-suc">
+											<div class=" row">
+												
+											
+												<img src="{% static 'images/default.jpeg' %}" width="30%" height="30%" style="" alt="Not found"></img>
+											
+										
+										<div class="bg-w">
+											<div>
+												<h3 class="mb-2">{{x.emergency}}</h3>
+				              <div class="meta-wrap">
+												<p class="meta">
+				              		<span><i class="icon-calendar mr-2"></i>{{x.dob}}</span>
+									<span><i class="icon-contact_mail"></i> {{x.email}}</a></span>
+									<div class="meta-wrap">
+										<p class="meta"><span><i class="icon-mobile-phone"></i> +91 {{x.mobile}}</span></p>
+									</div>
+				              		
+								  </p>
+							  </div>
+							 
+				              <div>
+									<span><i class="icon-address-card"></i>  
+								{{x.blood}}, {{x.city}}, {{x.state}}
+								</span>
+							  </div>
+							</div>
+						</div>
+						</div>
+						</div>
+									</div>
+								</div>
+					</div>
+						{% endfor %}
+
+						{% else %}
+
+						<h4 class="alert-heading text-center">No Camps for Today</h4>
+						{% endif%}
+	    			</div>
+	    </section>
+		</div><!-- END COLORLIB-MAIN -->
+	</div><!-- END COLORLIB-PAGE -->
+	
+<div class=" col-xs-4 col-sm-3 col-md-3 col-lg-3">
+<!--		
+	<div class="img d-flex align-self-auto align-items-center js-fullheight" width="100%" height="100%" style="background-image:url({% static 'images/home.jpg'%});">		
+
+		<img src="{% static 'images/home.jpg'%}" alt="test image" class="img-fluid.max-width: 100% height:auto rounded float ">
+	-->
+	<div id="chart-1">{{ output|safe }}</div>
+
+	</div>
+	</div>			
+						
+	
+	
+
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+
+  
+  <script>
+		var d = new Date();
+
+		var month = d.getMonth()+1;
+		var day = d.getDate();
+		
+		var output = d.getFullYear() + '-' +
+			(month<10 ? '0' : '') + month + '-' +
+			(day<10 ? '0' : '') + day;
+
+		
+ </script>
+
+  <script src="{%static 'js/jquery.min.js'%}"></script>
+  <script src="{%static 'js/jquery-migrate-3.0.1.min.js'%}"></script>
+  <script src="{%static 'js/popper.min.js'%}"></script>
+  <script src="{%static 'js/bootstrap.min.js'%}"></script>
+  <script src="{%static 'js/jquery.easing.1.3.js'%}"></script>
+  <script src="{%static 'js/jquery.waypoints.min.js'%}"></script>
+  <script src="{%static 'js/jquery.stellar.min.js'%}"></script>
+  <script src="{%static 'js/owl.carousel.min.js'%}"></script>
+  <script src="{%static 'js/jquery.magnific-popup.min.js'%}"></script>
+  <script src="{%static 'js/aos.js'%}"></script>
+  <script src="{%static 'js/jquery.animateNumber.min.js'%}"></script>
+  <script src="{%static 'js/scrollax.min.js'%}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false'%}"></script>
+  <script src="{%static 'js/google-map.js'%}"></script>
+  <script src="{%static 'js/main.js'%}"></script>
+    
+  </body>
+</html>

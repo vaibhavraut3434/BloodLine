@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Title Page</title>
+
+        <!-- Bootstrap CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+
+        
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <img src="index.html" alt="" sizes="" srcset="">
+        </div>
+        
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId">
+          Launch
+        </button>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                        <div class="modal-header">
+                                <h5 class="modal-title">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                            </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            Add rows here
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            $('#exampleModal').on('show.bs.modal', event => {
+                var button = $(event.relatedTarget);
+                var modal = $(this);
+                // Use above variables to manipulate the DOM
+                
+            });
+        </script>
+
+
+       <div>
+           <a href="" id="h1">h1</a>
+       </div>
+       <div>
+            <a href="" id="h2">h2</a>
+        </div>
+        <div class="bg-primary" id="div1">
+                <h1 class="text-center">Hello World</h1>
+        </div>
+        
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 bg-dark" id="div2">
+                <h1 class="text-center">Hello World22222<br></h1>
+        </div>
+
+
+
+        <div class="product clearfix">
+
+                <h4>Bath Bomb Cake Slice - Melting Heart</h4>
+                
+                <p>Drizzled with soap this Bath Bomb Cake Slice looks so authentic.</p>
+                
+                <a href="#" class="show_hide">See Full Description</a>
+                <div class="productDescription">
+                <p>This very large bath bomb will fizz up to two minutes, how good is that. Drizzled with soap it looks so authentic. This cake slice has a scent of Tropical Fruit including Pineapple, Mango & Grapefruit and you'll be surrounded by gorgeous flowers and glitter. <a href="#" class="show_hide">Hide</a></p></div>
+                
+                </div>
+                
+                <div class="product clearfix">
+                
+                <h4>Cupcake Bath Bomb - La Vie en Rose</h4>
+                
+                <p>Muffin Size in it's own Cake Box, this is the most elegant cupcake bathbomb.</p>
+                
+                <a href="#" class="show_hide">See Full Description</a>
+                <div class="productDescription">
+                <p>Muffin Size in it's own Cake Box, this is the most elegant and luxurious handmade cupcake bathbomb bath treat as it contains pure essential oils of lavender and rose. Perfect for those who need to unwind and want a bit of indulgence.<br/>
+                If you think this Bath-Patisserie creation is too pretty to use, place it on your bathroom shelf and let the aromas fill the room!<br/>
+                <b>Ingredients:</b>
+                Sodium Bicarbonate, Citric Acid, Sucrose, Aqua, Egg Powder (Ovum), Prunus Amygdalus Dulcis, Sodium Lauryl Sulphate, Lavandula Officinalis, Rosa damascena, Potassium Bitartrate, Hamamelis Virginiana Distillate, GERANIOL, LIMONENE, LINALOOL, CITRAL, EUGENOL, CITRONELLOL, FARNESOL. <a href="#" class="show_hide">Hide</a></p></div>
+                </div>
+
+
+
+                <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+        $(".productDescription").hide();
+        $(".show_hide").show();
+
+    $('.show_hide').click(function(){
+    $(".productDescription").slideToggle();
+    return false;
+    });
+
+});
+
+</script>
+
+
+        <script>
+        
+                $(document).ready(function(){
+                    $("#").hide();
+                    //$("#div2").hide();
+
+                    $("#h1").click(function(){
+                        $("#div1").show();
+                        $("#div2").hide();
+                    });
+                    $("#h2").click(function(){
+                        $("#div2").show();
+                       // $("#div1").hide();
+                    });
+                });
+         </script>
+
+         <script>
+                var d = new Date();
+
+                var month = d.getMonth()+1;
+                var day = d.getDate();
+                
+                var output = d.getFullYear() + '-' +
+                    (month<10 ? '0' : '') + month + '-' +
+                    (day<10 ? '0' : '') + day;
+
+                    alert(output)
+
+
+
+         </script>
+
+
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Bootstrap JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+</html>

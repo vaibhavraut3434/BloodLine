@@ -1,0 +1,1130 @@
+
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+  <head>
+    <title>Andrea - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>         
+    <script src="{%static 'js/abc.js'%}"></script> 
+    
+    <script src="{%static 'js/jquery-3.4.1.min.js'%}"></script> 
+  
+  <!--
+    <script> 
+        function disable() {
+        document.getElementById("liveorgan").disabled = true;
+        document.getElementById("deadorgan").disabled = false;
+        }
+        function enable() {
+        document.getElementById("deadorgan").disabled = true;
+        document.getElementById("liveorgan").disabled = false;
+        }
+    </script>
+    
+-->
+          <!--Function for Donor type-->
+    <script> 		
+			
+        $(document).ready(function(){ 
+      
+          $("#deadorgan").hide();
+          $("#liveorgan").show();
+          
+         
+          $("#livedonor").click(function () {
+            $("#liveorgan").show();
+            $("#deadorgan").hide();
+            
+          });
+      
+          $("#deaddonor").click(function () {
+            $("#deadorgan").show();
+            $("#liveorgan").hide();
+            
+          });
+      
+          
+        }); 
+      </script>
+
+<script>
+    function phonenumber(inputtxt)
+    {
+      var phoneno = /^\d{10}$/;
+      if(inputtxt.value.match(phoneno))
+      {
+          return true;
+      }
+      else
+      {
+         $name = $('#userid').val();
+         alert("Not a valid Phone Number");
+         $('#userid').val($name);
+         $('#donate_Bood_nav').addClass('active');
+      }
+      } 
+</script>
+
+  
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{%static 'css/open-iconic-bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{%static 'css/animate.css'%}">
+    
+    <link rel="stylesheet" href="{%static 'css/owl.carousel.min.css'%}">
+    <link rel="stylesheet" href="{%static 'css/owl.theme.default.min.css'%}">
+    <link rel="stylesheet" href="{%static 'css/magnific-popup.css'%}">
+
+    <link rel="stylesheet" href="{%static 'css/aos.css'%}">
+
+    <link rel="stylesheet" href="{%static 'css/ionicons.min.css'%}">
+
+    <link rel="stylesheet" href="{%static 'css/bootstrap-datepicker.css'%}">
+    <link rel="stylesheet" href="{%static 'css/jquery.timepicker.css'%}">
+
+    
+    <link rel="stylesheet" href="{%static 'css/flaticon.css'%}">
+    <link rel="stylesheet" href="{%static 'css/icomoon.css'%}">
+    <link rel="stylesheet" href="{%static 'css/style.css'%}">
+  </head>
+  <body>
+
+	<div id="colorlib-page" class="">
+		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+		<aside id="colorlib-aside" role="complementary" class="js-fullheight">
+			<nav id="colorlib-main-menu" role="navigation">
+				<ul>
+<label class="text-info" for="">
+  <img src="{% static 'images/user.png'%}" alt="" sizes="" style="height: 80px;width: 80px" srcset=""></span>  {{ username1x}} {{name}}</label>
+                    <li class="colorlib-active"><a href="/">Home</a></li>
+                    <li><a href="/host/bloodcamp">Host a Blood Donation Camp</a></li>
+					<li><a href="/about">About</a></li>
+					<li><a href="/contact">Contact</a></li>
+				</ul>
+			</nav>
+
+      <div class="colorlib-footer">
+          <h1 id="colorlib-logo" class="mb-5"><a href="/" style="background-image: url({% static 'images/bg_1.jpg'%});">Blood <span>Line</span></a></h1>
+          <p class="pfooter"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+      Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Vaibhav</a>
+      <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+        </div>
+		</aside> <!-- END COLORLIB-ASIDE -->
+    
+    
+    <div id="colorlib-main"  class="bg-primary">
+			<section class="ftco-section ftco-no-pt ftco-no-pb">
+        <div class="container">
+          <div class="row d-flex">
+            <div class="col-xl-12 py-5 px-md-5">
+               <!--Nav start-->
+                <div class="row">
+                  <ul class="nav justify-content-center">
+                      <li class="nav-item">
+                        
+                          <a class="nav-link active text-light " id="search_blood" href="#searchforblood">Search for Blood </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-light " id="host_camp" href="#hostacamp">Donate Organ</a>
+                      </li>
+                      <li class="nav-item">
+                          
+                        <a class="nav-link text-light" id="donate_camp" id="donate_Bood_nav" href="#donateblood">Donate Blood</a>
+                      </li>
+                      <li class="nav-item">
+
+                        <a class="nav-link text-light" id="organ_data" href="#organdata">Organ Info</a>
+                    </li>
+                      
+                      <li class="nav-item">
+                          <a class="nav-link text-light" href="auth2">Log-Out</a>
+                      </li>
+                      
+                  </ul>
+                </div> 
+                <!--Nav End-->
+
+            </div>
+          </div>
+        </div>
+      </section>
+      
+        <!-- Search For Blood start-->
+       
+
+        <div class="row" id="searchforblood">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="card">
+              <form action="/accounts/dash" method="POST">
+                {% csrf_token %}
+                <div class="card-body">
+                  <h5 class="card-title text-center"> 
+                     
+                    
+                    Search For Blood</h5>
+
+                
+                  <div class="row">
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">  
+                            <select id="selctstate" class="custom-select" name="selctstate">
+                                <option class="active" value="select">-- Select State --</option>
+                                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                <option value="Assam">Assam</option>
+                                <option value="Bihar">Bihar</option>
+                                <option value="Chandigarh">Chandigarh</option>
+                                <option value="Chhattisgarh">Chhattisgarh</option>
+                                <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                                <option value="Daman and Diu">Daman and Diu</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Haryana">Haryana</option>
+                                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                <option value="Jharkhand">Jharkhand</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Kerala">Kerala</option>
+                                <option value="Lakshadweep">Lakshadweep</option>
+                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Manipur">Manipur</option>
+                                <option value="Meghalaya">Meghalaya</option>
+                                <option value="Mizoram">Mizoram</option>
+                                <option value="Nagaland">Nagaland</option>
+                                <option value="Orissa">Orissa</option>
+                                <option value="Pondicherry">Pondicherry</option>
+                                <option value="Punjab">Punjab</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Sikkim">Sikkim</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Tripura">Tripura</option>
+                                <option value="Uttaranchal">Uttaranchal</option>
+                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                <option value="West Bengal">West Bengal</option>
+                              </select>
+                          </div>
+                          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                              <select id="my-select" class="custom-select" name="selectcity">
+                                  <option value="City" class="active" >-- Select City --</option>
+                                  <option value="Nagpur">Nagpur</option>
+                                  <option value="Mumbai">Mumbai</option>
+                                  <option value="Pune">Pune</option>
+                                  <option value="Nashik">Nashik</option>
+                                  <option value="Latur">Latur</option>
+                                  <option value="Nanded">Nanded</option>
+                                  <option value="Akola">Akola</option>
+                              </select>
+                          </div>
+                          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                              <select id="my-select" class="custom-select" name="selectbloodtype">
+                                  <option class="active">-- Select Blood Group --</option>
+                                  <option>A Positive</option>
+                                  <option>A Negative</option>
+                                  
+                                  <option>B Positive</option>
+                                  <option>B Negative</option>
+                                  
+                                  <option>AB Positive</option>
+                                  <option>AB Negative</option>
+                                  
+                                  <option>O Positive</option>
+                                  <option>O Negative</option>
+                                  
+                              </select>
+                          </div>
+
+
+          
+                  </div>
+                  <div class="row col-4" style="padding-top: 20px">
+                      <a href="#" data-toggle="modal" data-target="#Search"></a>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="row">
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <button type="submit" name="" id="" class="btn btn-success btn-block">Search</button>    
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <button type="reset" class="btn col-12 btn-secondary">Reset</button>      
+                    </div>
+                  </div>
+                <!-- Button trigger modal -->
+
+                </div>
+            </form>
+          </div>
+
+            <div class="card " style="padding-top: 10px">
+                <div class="col-12 text-center">
+                  <label for="" class=""><h4 class="">
+                     
+                    
+                    Result for Donor/Bank</h4></label>
+                  
+                    
+                  <table class="table table-striped">
+                      <caption>List of Nearby Donor</caption>
+                    <thead class="thead-light">
+                      <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Date of Birth</th>
+                        <th>Blood Group</th>
+                        <th>Contact</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                       </tr>
+                    </thead>
+                    <tbody>
+                        
+                      
+                        {% for x in obj_list %}
+                        {% if s in x.state  and c in x.city %} 
+
+                        
+
+                      
+
+                      <tr>
+                       
+                        <th scope="row"> {{forloop.counter}}</th>
+                        <td>{{x.name}}</td>
+                        <td>{{x.dob}}</td>
+                        <td>{{x.blood}}</td>
+                        <td>{{x.mobile}}</td>
+                        <td>{{x.email}}</td>
+                        <td>{{x.city}} , {{x.state}}</td>
+                        
+                  <!-- {% if x.donor is True %}
+                        <td>Donor</td>
+                        {% else %}
+                        <td>Donor</td>
+                        {% endif %}
+
+                        {% if x.emergency is True %}
+                        <td>Yes</td>
+                        {% else %}
+                        <td>No</td>
+                        {% endif %}
+                  -->
+                        
+
+                      </tr>
+                      {% endif %}
+                      {% endfor %}
+                     
+                    </tbody>
+<!--                  <tfoot>
+                      <tr>
+                        <th>
+                          #
+                        </th>
+                        <th> 
+                          <input type="search" name="search_name" id="search_name" class="form-control" value="" required="required" title="">
+                         </th>
+                      </tr>
+                    </tfoot> -->
+                  </table>
+                </div>
+            </div>
+          </div>
+          
+        </div>
+        <!-- Search For Blood end-->
+
+
+        <!-- Donate organ  start-->
+
+        <div class="row" id="hostacamp">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="card">
+              
+                <div class="card-body">
+                 
+
+                  <div class="row">
+                     <!-- Organ Donation form start--> 
+                          
+                     <form action="/accounts/orgform" name="organform" method="POST">
+                      {% csrf_token %}
+              
+                     
+                      <div class="card-body">
+                        <h5 class="card-title text-center">  Organ Donation Form</h5>
+                        <div class="row col-4" style="padding-top: 20px">
+                            <a href="#" data-toggle="modal" data-target="#Search"> </a>
+                        </div>
+                        <div class="row">  
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                            <div class="form-group">
+                                <label for="my-select">Full Name</label>
+                              
+                            <input type="text" required="True" class="form-control" name="orgname" placeholder="Your Full Name">
+                        </div>
+                        </div>
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                            <div class="form-group form-control-range">
+                                <label for="my-select">Date of Birth</label>
+                              
+                            <input class="justify-content-center form-control" required="True" name="orgdob" type="date" placeholder="Year of Birth">
+                        </div>
+                        </div>
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                            <div class="form-group">
+                                <label for="my-select">Blood Type</label>
+                              
+                            <select id="my-select" required="True" class="custom-select" name="orgbloodtype1">
+                                <option class="active">-- Select Blood Group --</option>
+                                <option>A Positive </option>
+                                <option>A Negative </option>
+                                
+                                <option>B Positive </option>
+                                <option>B Negative </option>
+                                
+                                <option>AB Positive </option>
+                                <option>AB Negative </option>
+                                 
+                                <option>O Positive </option>
+                                <option>O Negative </option>
+                                
+                            </select>
+                        </div>
+                        </div>
+
+                      </div>
+                      <div class="row">
+                        
+                      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                          <div class="form-group">
+                              <label for="my-select">Mobile No.</label>
+                          <input class="form-control" required="True" name="orgcontact" type="tel" placeholder="Mobile No.">
+                            
+                        </div>
+                      </div>
+                      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <div class="form-group">
+                          <label for="my-select">Email</label>
+                        <input class="form-control" required="True" name="orgemail" type="email" placeholder="Email">
+                      </div>
+                      </div>
+              
+                      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                          <div class="form-group">
+                              <label for="my-select">Country</label>
+                          <input class="form-control" disabled="disabled" name="orgcountry" type="text" placeholder="India">
+                      </div>
+                      </div>
+                  </div>
+
+                  <div class="row">
+                        
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <div class="form-group">
+                          <label for="my-select">Donor Type</label>
+                          <div class="row ">
+                          <div class="col-12"> 
+                          <label class="radio-inline">
+                              <input type="radio" id="livedonor" onclick="disable()" name="donortype" value="Live Donor" checked>Live Donor
+                            </label>
+                          </div>
+                          <div class="col-12">
+                          <label class="radio-inline">
+                              <input type="radio" id="deaddonor" onclick="enable()" name="donortype" value="Brain Dead">Brain Dead Patient
+                            </label>
+                            
+                          </div>
+                          </div>
+                          <!--
+                          <select id="donortype" class="custom-select" name="donortype">
+                            <option>Live Donor</option>
+                            <option>Brain Dead Patient</option>
+                          </select>
+                          -->
+                        </div>
+                    </div>
+            
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <div class="form-group">
+                          <label for="my-select">Organs</label>
+                          <select id="liveorgan" class="custom-select"  name="liveorgan">
+                            <option class="active" value="select">-- Select Organ --</option>
+                            <option>Liver</option>
+                            <option>Intestine</option>
+                            <option>Kidney</option>
+                            <option>Lungs</option>
+                            <option>Pancreas</option>
+                          </select>
+
+                          <select id="deadorgan" class="custom-select" name="deadorgan">
+                            <option class="active" value="select">-- Select Organ --</option>  
+                            <option>Heart</option>
+                              <option>Liver</option>
+                              <option>Intestine</option>
+                              <option>Kidney</option>
+                              <option>Lungs</option>
+                              <option>Pancreas</option>
+                            </select>
+                        </div>
+                    </div>
+            
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                      <div class="form-group">
+                        <label for="my-select"></label>
+                        
+                      </div>
+                  </div>
+                    </div>
+               
+
+
+                  <div class="row">
+                      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <div class="form-group">
+                          
+                          <select id="selctstate" class="custom-select" name="orgfrm2state">
+                              <option class="active" value="select">-- Select State --</option>
+                              <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                              <option value="Andhra Pradesh">Andhra Pradesh</option>
+                              <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                              <option value="Assam">Assam</option>
+                              <option value="Bihar">Bihar</option>
+                              <option value="Chandigarh">Chandigarh</option>
+                              <option value="Chhattisgarh">Chhattisgarh</option>
+                              <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                              <option value="Daman and Diu">Daman and Diu</option>
+                              <option value="Delhi">Delhi</option>
+                              <option value="Goa">Goa</option>
+                              <option value="Gujarat">Gujarat</option>
+                              <option value="Haryana">Haryana</option>
+                              <option value="Himachal Pradesh">Himachal Pradesh</option>
+                              <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                              <option value="Jharkhand">Jharkhand</option>
+                              <option value="Karnataka">Karnataka</option>
+                              <option value="Kerala">Kerala</option>
+                              <option value="Lakshadweep">Lakshadweep</option>
+                              <option value="Madhya Pradesh">Madhya Pradesh</option>
+                              <option value="Maharashtra">Maharashtra</option>
+                              <option value="Manipur">Manipur</option>
+                              <option value="Meghalaya">Meghalaya</option>
+                              <option value="Mizoram">Mizoram</option>
+                              <option value="Nagaland">Nagaland</option>
+                              <option value="Orissa">Orissa</option>
+                              <option value="Pondicherry">Pondicherry</option>
+                              <option value="Punjab">Punjab</option>
+                              <option value="Rajasthan">Rajasthan</option>
+                              <option value="Sikkim">Sikkim</option>
+                              <option value="Tamil Nadu">Tamil Nadu</option>
+                              <option value="Tripura">Tripura</option>
+                              <option value="Uttaranchal">Uttaranchal</option>
+                              <option value="Uttar Pradesh">Uttar Pradesh</option>
+                              <option value="West Bengal">West Bengal</option>
+                            </select>
+                        
+                          
+                      </div>
+                      </div>
+                      
+                      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 form-group">
+                          <select id="my-select" class="custom-select" name="orgfrm2city">
+                              <option value="City" class="active" >-- Select City --</option>
+                              <option value="Nagpur">Nagpur</option>
+                              <option value="Mumbai">Mumbai</option>
+                              <option value="Pune">Pune</option>
+                              <option value="Nashik">Nashik</option>
+                              <option value="Latur">Latur</option>
+                              <option value="Nanded">Nanded</option>
+                              <option value="Akola">Akola</option>
+                          </select>  
+                      </div>
+              
+                    </div>
+                
+                      <div class="row">
+                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">            
+                        <input class="text-warning" type="checkbox" value="agree" required="True" checked="True" name="orgagree"> I authorize this website and state that I am above 18 years old. I agree to display my details, so that nearby could contact me.
+                    </div>
+                
+              </div>
+                     
+            </div>
+                  <div class="row col-4" style="padding-top: 20px">
+                    <a href="#" data-toggle="modal" data-target="#Search"></a>
+                </div>
+              
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                  </div>
+                  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                      <button type="submit" name="orgsubmit" onclick="phonenumber(document.organform.orgcontact)"  class="btn btn-success btn-block">Save</button>    
+                  </div>
+                  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                      <button type="reset" class="btn col-12 btn-secondary">Reset</button>      
+                  </div>
+
+                    <!--Organ Doanatin form end-->
+                  </div>
+
+                  </div>
+                <!-- Button trigger modal -->
+              </div>
+            </form>
+                </div>
+            
+          </div>
+
+            
+          </div>
+          
+        </div>
+        <!-- Host a Blood  camp end-->
+
+
+              
+<!-- Donate  Blood start-->
+      
+<div class="row" id="donateblood">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="card">
+      {%if username1x %}
+      <form action="/accounts/entry" name="organform1" method="POST">
+        {% csrf_token %}
+
+       
+        <div class="card-body">
+          <h5 class="card-title text-center">   Donate Blood</h5>
+          <div class="row col-4" style="padding-top: 20px">
+              <a href="#" data-toggle="modal" data-target="#Search"></a>
+          </div>
+          <div class="row">
+            
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+              
+            </div>
+            
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 form-group">
+              <label for="my-input">User id</label>
+              <input id="userid" required="True" value="{{username1x}}" placeholder="" readonly="readonly" class="form-control" type="text" name="userid">
+            </div>
+          </div>
+          <div class="row">  
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+              <label for="input-id" class="">Your Full Name</label>
+              <input type="text" required="True" class="form-control" value="{{name}}" name="frm2name" placeholder="Your Full Name">
+          </div>
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+              <label for="input-id" class="">Year of Birth</label>
+              <input class="justify-content-center form-control" required="True" name="dob" type="date" placeholder="Year of Birth">
+          </div>
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 form-group">
+            <label for=""></label>
+              <select id="my-select" required="True" class="custom-select" name="bloodtype1">
+                  <option class="active">-- Select Blood Group --</option>
+                  <option>A Positive</option>
+                  <option>A Negative</option>
+                  
+                  <option>B Positive</option>
+                  <option>B Negative</option>
+                  
+                  <option>AB Positive</option>
+                  <option>AB Negative</option>
+                  
+                  <option>O Positive</option>
+                  <option>O Negative</option>
+                  
+              </select>
+          </div>
+        </div>
+        <div class="row">
+          
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <label for="input-id" class="">Mobile No.</label>
+            <input class="form-control" required="True" name="contact" type="tel" placeholder="Mobile No.">
+        </div>
+
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <label for="input-id" class="">Email</label>
+            <input class="form-control" required="True" name="email" type="email" placeholder="Email">
+        </div>
+
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 form-group">
+          
+          <label for="input-id">Country</label>
+          
+            <input class="form-control" disabled="disabled" name="country" type="text" placeholder="India">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          <label for=""></label>
+            <select id="selctstate" class="custom-select" name="frm2state">
+                <option class="active" value="select">-- Select State --</option>
+                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chandigarh">Chandigarh</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                <option value="Daman and Diu">Daman and Diu</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Lakshadweep">Lakshadweep</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Orissa">Orissa</option>
+                <option value="Pondicherry">Pondicherry</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttaranchal">Uttaranchal</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="West Bengal">West Bengal</option>
+              </select>
+          
+            
+        </div>
+
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          <label for=""></label>
+            <select id="my-select" class="custom-select" name="frm2city">
+                <option value="City" class="active" >-- Select City --</option>
+                <option value="Nagpur">Nagpur</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Pune">Pune</option>
+                <option value="Nashik">Nashik</option>
+                <option value="Latur">Latur</option>
+                <option value="Nanded">Nanded</option>
+                <option value="Akola">Akola</option>
+            </select>  
+        </div>
+
+        </div>
+
+
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <input class="" id="emergency" value="agree" name="emergency" onclick="myFunctoin()"  type="checkbox"> Available in case of emergency
+                
+                <script>
+                    function myFunction() {
+                      return 1111;
+                    }
+                    
+                    document.getElementById("demo").innerHTML = myFunction();
+                    </script>
+            
+            
+              </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">            
+                <input class="text-warning" type="checkbox" required="True" checked="True" name="agree"> I authorize this website and state that I am above 18 years old. I agree to display my details, so that nearby could contact me.
+            </div>
+
+
+              
+
+        </div>
+        <div class="card-footer">
+          <div class="row justify-content-center">
+            
+              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                  <button type="submit" name="" id="" onclick="phonenumber(document.organform1.contact)" class="btn btn-success btn-block">Save</button>    
+              </div>
+              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                  <button type="reset" class="btn col-12 btn-secondary">Reset</button>      
+              </div>
+          </div>
+        </div>
+    </form>
+    
+    {% else %}
+    <!--
+    <i class="fas fa-h2   text-center text-warning "> <h2 class="text-warning">You Had Already Resgistered...</h2></i>
+-->
+<div class="">
+
+<div class="row text-center">
+  
+  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+    
+  </div>
+  
+  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+      
+    <h2 class="text-center text-warning">You Had Already Registered...</h2>
+  </div>
+  
+  
+</div>
+
+
+<form action="/accounts/entry" name="organform1" method="POST">
+  {% csrf_token %}
+
+ 
+  <div class="card-body">
+    <h5 class="card-title text-center">   Update Form </h5>
+    <div class="row col-4" style="padding-top: 20px">
+        <a href="#" data-toggle="modal" data-target="#Search"></a>
+    </div>
+    <div class="row">
+      
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          <input id="is_updated_form" hidden="hidden" required="True" value="{{user_updated_id}}" placeholder="" readonly="readonly" class="form-control" type="text" name="is_updated_form">
+      </div>
+      
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 form-group">
+        <label for="my-input">User id</label>
+        <input id="userid" required="True" value="{{user_updated_id}}" placeholder="" readonly="readonly" class="form-control" type="text" name="userid">
+      </div>
+    </div>
+    <div class="row">  
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        <label for="input-id" class="">Your Full Name</label>
+        <input type="text" required="True" class="form-control" value="{{name}}" name="frm2name" placeholder="Your Full Name">
+    </div>
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        <label for="input-id" class="">Year of Birth</label>
+        <input class="justify-content-center form-control" required="True" name="dob" type="date" placeholder="Year of Birth">
+    </div>
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 ">
+      <label for=""></label>
+        <select id="my-select" required="True" class="form-control custom-select" name="bloodtype1">
+            <option class="active">-- Select Blood Group --</option>
+            <option>A Positive</option>
+            <option>A Negative</option>
+            
+            <option>B Positive</option>
+            <option>B Negative</option>
+            
+            <option>AB Positive</option>
+            <option>AB Negative</option>
+            
+            <option>O Positive</option>
+            <option>O Negative</option>
+            
+        </select>
+    </div>
+  </div>
+  <div class="row">
+    
+  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+      <label for="input-id" class="">Mobile No.</label>
+      <input class="form-control" required="True" name="contact" type="tel" placeholder="Mobile No.">
+  </div>
+
+  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+      <label for="input-id" class="">Email</label>
+      <input class="form-control" required="True" name="email" type="email" placeholder="Email">
+  </div>
+
+  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 form-group">
+    
+    <label for="input-id">Country</label>
+    
+      <input class="form-control" disabled="disabled" name="country" type="text" placeholder="India">
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+    <label for=""></label>
+      <select id="selctstate" class="custom-select form-control" name="frm2state">
+          <option class="active" value="select">-- Select State --</option>
+          <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+          <option value="Andhra Pradesh">Andhra Pradesh</option>
+          <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+          <option value="Assam">Assam</option>
+          <option value="Bihar">Bihar</option>
+          <option value="Chandigarh">Chandigarh</option>
+          <option value="Chhattisgarh">Chhattisgarh</option>
+          <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+          <option value="Daman and Diu">Daman and Diu</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Goa">Goa</option>
+          <option value="Gujarat">Gujarat</option>
+          <option value="Haryana">Haryana</option>
+          <option value="Himachal Pradesh">Himachal Pradesh</option>
+          <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+          <option value="Jharkhand">Jharkhand</option>
+          <option value="Karnataka">Karnataka</option>
+          <option value="Kerala">Kerala</option>
+          <option value="Lakshadweep">Lakshadweep</option>
+          <option value="Madhya Pradesh">Madhya Pradesh</option>
+          <option value="Maharashtra">Maharashtra</option>
+          <option value="Manipur">Manipur</option>
+          <option value="Meghalaya">Meghalaya</option>
+          <option value="Mizoram">Mizoram</option>
+          <option value="Nagaland">Nagaland</option>
+          <option value="Orissa">Orissa</option>
+          <option value="Pondicherry">Pondicherry</option>
+          <option value="Punjab">Punjab</option>
+          <option value="Rajasthan">Rajasthan</option>
+          <option value="Sikkim">Sikkim</option>
+          <option value="Tamil Nadu">Tamil Nadu</option>
+          <option value="Tripura">Tripura</option>
+          <option value="Uttaranchal">Uttaranchal</option>
+          <option value="Uttar Pradesh">Uttar Pradesh</option>
+          <option value="West Bengal">West Bengal</option>
+        </select>
+    
+      
+  </div>
+
+  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+    <label for=""></label>
+      <select id="my-select" class="custom-select form-control" name="frm2city">
+          <option value="City" class="active" >-- Select City --</option>
+          <option value="Nagpur">Nagpur</option>
+          <option value="Mumbai">Mumbai</option>
+          <option value="Pune">Pune</option>
+          <option value="Nashik">Nashik</option>
+          <option value="Latur">Latur</option>
+          <option value="Nanded">Nanded</option>
+          <option value="Akola">Akola</option>
+      </select>  
+  </div>
+
+  </div>
+
+
+  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          <input class="" id="emergency" value="agree" name="emergency" onclick="myFunctoin()"  type="checkbox"> Available in case of emergency
+          
+          <script>
+              function myFunction() {
+                return 1111;
+              }
+              
+              document.getElementById("demo").innerHTML = myFunction();
+              </script>
+      
+      
+        </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">            
+          <input class="text-warning" type="checkbox" required="True" checked="True" name="agree"> I authorize this website and state that I am above 18 years old. I agree to display my details, so that nearby could contact me.
+      </div>
+
+
+        
+
+  </div>
+  <div class="card-footer">
+    <div class="row justify-content-center">
+      
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <button type="submit" name="" id="" onclick="phonenumber(document.organform1.contact)" class="btn btn-success btn-block">Save</button>    
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <button type="reset" class="btn col-12 btn-secondary">Reset</button>      
+        </div>
+    </div>
+  </div>
+</form>
+
+</div>
+
+
+
+
+
+
+
+    {%  endif %}
+  </div>
+
+    
+  </div>
+  
+</div>
+<!-- Donate  Blood end-->
+
+        <!-- Organ data start-->
+       
+
+        <div class="row" id="organdata">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="card">
+              <div class="row">
+                
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                  
+                </div>
+                
+                
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                  
+                <form action="/accounts/organdata" method="POST">
+                {% csrf_token %}
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <button type="submit" name="" id="" class="btn btn-success btn-block">Show</button>    
+                </div>
+              </form>
+
+            </div>
+                
+            </div>
+ 
+            </div>
+
+            <div class="card " style="padding-top: 10px">
+                <div class="col-12 text-center">
+                  <label for="" class=""><h4 class="">
+                     
+                    
+                    Result for Organ Donors</h4></label>
+                  
+                    
+                  <table class="table table-striped">
+                      
+                    <thead class="thead-light">
+                      <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Date of Birth</th>
+                        <th>Blood Group</th>
+                        <th>Organs</th>
+                        
+                        <th>Contact</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                       </tr>
+                    </thead>
+                    <tbody>
+                        
+                      
+                        {% for x in obj_list2 %}
+
+                      <tr>                       
+                        <th scope="row"> {{forloop.counter}}</th>
+                        <td>{{x.name}}</td>
+                        <td>{{x.dob}}</td>
+                        <td>{{x.blood}}</td>
+
+                        <td>{{x.organs1}}</td>
+                        <td>{{x.mobile}}</td>
+                        <td>{{x.email}}</td>
+                        <td>{{x.city}} , {{x.state}}</td>
+                        
+                      </tr>
+                     
+                      {% endfor %}
+                     
+                    </tbody>
+<!--                  <tfoot>
+                      <tr>
+                        <th>
+                          #
+                        </th>
+                        <th> 
+                          <input type="search" name="search_name" id="search_name" class="form-control" value="" required="required" title="">
+                         </th>
+                      </tr>
+                    </tfoot> -->
+                  </table>
+                </div>
+            </div>
+          </div>
+          
+        </div>
+        <!-- Search For Blood end-->
+
+
+
+
+    </div>                    
+	</div>
+
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg>
+
+</div>
+
+
+<script> 		
+			
+  $(document).ready(function(){ 
+
+    $("#hostacamp").hide();
+    $("#donateblood").hide();
+    $("#organdata").hide(); 
+
+    $("#search_blood").click(function () {
+      $("#searchforblood").show();
+      $("#hostacamp").hide();
+      $("#donateblood").hide();
+      $("#organdata").hide();
+      
+    });
+
+    $("#donate_camp").click(function () {
+      $("#donateblood").show();
+      $("#searchforblood").hide();
+      $("#hostacamp").hide();
+      $("#organdata").hide();
+    });
+
+    $("#host_camp").click(function () {
+      $("#hostacamp").show();
+      $("#searchforblood").hide();
+      $("#donateblood").hide();
+      $("#organdata").hide();
+    });
+
+    $("#organ_data").click(function () {
+      $("#organdata").show();
+      $("#searchforblood").hide();
+      $("#hostacamp").hide();
+      $("#donateblood").hide();
+      
+    });
+
+
+  }); 
+
+</script> 
+  <script src="{%static 'js/jquery.min.js'%}"></script>
+  <script src="{%static 'js/jquery-migrate-3.0.1.min.js'%}"></script>
+  <script src="{%static 'js/popper.min.js'%}"></script>
+  <script src="{%static 'js/bootstrap.min.js'%}"></script>
+  <script src="{%static 'js/jquery.easing.1.3.js'%}"></script>
+  <script src="{%static 'js/jquery.waypoints.min.js'%}"></script>
+  <script src="{%static 'js/jquery.stellar.min.js'%}"></script>
+  <script src="{%static 'js/owl.carousel.min.js'%}"></script>
+  <script src="{%static 'js/jquery.magnific-popup.min.js'%}"></script>
+  <script src="{%static 'js/aos.js'%}"></script>
+  <script src="{%static 'js/jquery.animateNumber.min.js'%}"></script>
+  <script src="{%static 'js/scrollax.min.js'%}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false'%}"></script>
+  <script src="{%static 'js/google-map.js'%}"></script>
+  <script src="{%static 'js/main.js'%}"></script>
+    
+  </body>
+</html>

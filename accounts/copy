@@ -1,0 +1,90 @@
+
+        #print(blood,"************")
+        n =  obj.filter(city=city, state=state)
+        #x = []
+        if blood in "O Positive":
+            for x in O_pos:
+                #print(x)
+                #print(n)
+                n = n |  obj.filter(city=city, state=state,blood=x)
+                #print(n)
+                obj = testing1.objects.all()
+                #y = n | x
+            return n
+        
+        if blood in "O Negative":
+            for x in O_neg:
+                #print(x)
+                #print(n)
+                n = n |  obj.filter(city=city, state=state,blood=x)
+                #print(n)
+                obj = testing1.objects.all()
+                #y = n | x
+            return n
+        
+        if blood in "A Negative":
+            for x in A_neg:
+                #print(x)
+                #print(n)
+                n = n |  obj.filter(city=city, state=state,blood=x)
+                #print(n)
+                obj = testing1.objects.all()
+                #y = n | x
+            return n
+        
+        if blood in "A Positive":
+            for x in A_pos:
+                #print(x)
+                #print(n)
+                n = n |  obj.filter(city=city, state=state,blood=x)
+                #print(n)
+                obj = testing1.objects.all()
+                #y = n | x
+            return n
+
+        
+        if blood in "B Negative":
+            for x in B_neg:
+                #print(x)
+                #print(n)
+                n = n |  obj.filter(city=city, state=state,blood=x)
+                #print(n)
+                obj = testing1.objects.all()
+                #y = n | x
+            return n
+
+        
+        if blood in "B Positive":
+            for x in B_pos:
+                #print(x)
+                #print(n)
+                n = n |  obj.filter(city=city, state=state,blood=x)
+                #print(n)
+                obj = testing1.objects.all()
+                #y = n | x
+            return n
+
+        
+        if blood in "AB Negative":
+            for x in AB_neg:
+                #print(x)
+                #print(n)
+                n = n |  obj.filter(city=city, state=state,blood=x)
+                #print(n)
+                obj = testing1.objects.all()
+                       #y = n | x
+                return n
+
+
+
+
+        
+        if blood in "AB Positive":
+            for x in AB_pos:
+                #print(x)
+                #print(n)
+                n = n |  obj.filter(city=city, state=state,blood=x)
+                #print(n)
+                obj = testing1.objects.all()
+                #y = n | x
+            return n
